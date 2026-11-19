@@ -643,7 +643,42 @@ for product in products:
 
 
 
-
-
-
                          #PYTHON NESTED LOOPS
+
+branches = [
+    {
+        "name": "Dar es Salaam",
+        "sales": [
+            {"product": "Rice", "quantity": 20},
+            {"product": "Sugar", "quantity": 15},
+            {"product": "Beans", "quantity": 10}
+        ]
+    },
+    {
+        "name": "Dodoma",
+        "sales": [
+            {"product": "Rice", "quantity": 12},
+            {"product": "Sugar", "quantity": 25},
+            {"product": "Beans", "quantity": 8}
+        ]
+    },
+    {
+        "name": "Arusha",
+        "sales": [
+            {"product": "Rice", "quantity": 30},
+            {"product": "Sugar", "quantity": 10},
+            {"product": "Beans", "quantity": 18}
+        ]
+    }
+]
+
+for branch in branches:
+    print(f"\nBranch: {branch['name']}")
+    branch_total = 0
+
+    for sale in branch["sales"]:
+        quantity = sale["quantity"]
+        print(f"  {sale['product']}: {quantity} sold")
+        branch_total += quantity
+
+    print(f"Total sales quantity: {branch_total}")
