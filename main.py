@@ -701,24 +701,82 @@
 
 
 #task2
-product_name = "Rice"
-available_stock = 100
+# product_name = "Rice"
+# available_stock = 100
 
 
-while available_stock > 0:
-    requested_quantity = int(input(f"How many units of {product_name} do you want?: "))
-    if requested_quantity <= 0:
-        print("Please enter a quantity greater than 0.")
-        continue
-    if requested_quantity > available_stock:
-        print(f"Available stock: {product_name}: {available_stock}")
-        continue
+# while available_stock > 0:
+#     requested_quantity = int(input(f"How many units of {product_name} do you want?: "))
+#     if requested_quantity <= 0:
+#         print("Please enter a quantity greater than 0.")
+#         continue
+#     if requested_quantity > available_stock:
+#         print(f"Available stock: {product_name}: {available_stock}")
+#         continue
 
-    available_stock -= requested_quantity
-    print("Purchase Successful!")
+#     available_stock -= requested_quantity
+#     print("Purchase Successful!")
 
-    if available_stock == 0:
-        print("Product Out of Stock!")
-        break
+#     if available_stock == 0:
+#         print("Product Out of Stock!")
+#         break
 
-print("Thank You!")
+# print("Thank You!")
+
+
+
+            
+
+
+              #PYTHON LIST
+
+products = [
+    "Rice",
+    "Sugar",
+    "Beans",
+    "Cooking Oil",
+    "Flour"
+]
+
+print("All products:", products)
+print("First product:", products[0])
+print("Last product:", products[-1])
+
+products[products.index("Flour")] = "Wheat Flour"
+print("After changing Flour:", products)
+
+products.append("Salt")
+print("After adding Salt:", products)
+
+products.insert(2, "Milk")
+print("After inserting Milk at index 2:", products)
+
+products.remove("Sugar")
+print("After removing Sugar:", products)
+print("")
+print(products)
+
+
+
+
+#task
+orders = [
+    "Chips",
+    "Chicken",
+    "Rice",
+    "Chips",
+    "Beef",
+    "Rice",
+    "Chips",
+]
+
+print("All Orders:", orders)
+total_number_chips = orders.count("Chips")
+print("Total Chips:", total_number_chips)
+beef_index = orders.index("Beef")
+print("Beef index is:", beef_index)
+removed_order = orders.pop(-1)
+print("Last order removed:", removed_order)
+print("Orders after removal:", orders)
+orders.reverse()
+print("Orders reversed:", orders)
